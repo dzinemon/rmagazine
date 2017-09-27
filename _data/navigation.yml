@@ -1,0 +1,45 @@
+nav_top:
+  - text: Subscribe
+    link: subscribe.html
+    show: true
+  - text: Advertise
+    link: advertise.html
+    show: true
+  - text: Submit Press Release
+    link: press-release.html
+    show: true
+  - text: Write for Us
+    class: write-us
+    icon: "glyphicon glyphicon-pencil"
+    link: authors.html
+    show: true
+
+# Sub navigation filter Start
+
+nav_article:
+  - text: All Categories
+    link: "all"
+  - text: Category1
+    link: "category1"
+  - text: Category2
+    link: "category2"
+  - text: Category3
+    link: "category3"
+  - text: Category4
+    link: "category4"
+  - text: Category5
+    link: "category5"
+
+nav_ranking:
+  - text: Top 50
+    link: "all"
+  - text: Quick Service
+    link: "quick_service"
+  - text: Fast Casual
+    link: "fast_casual"
+  - text: Table Service
+    link: "table_service"
+  - text: Independent
+    link: "independent"
+
+# Sub navigation filter End

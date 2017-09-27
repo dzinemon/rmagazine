@@ -1,0 +1,27 @@
+.banner
+  margin-bottom: 20px
+  display: block
+
+
+  img
+    width: 100%
+
+.prices
+  margin-top: 20px
+  margin-bottom: 30px
+
+.prices-item
+  @include desktop
+    width: 32%
+    float: left
+    margin: 1px 2px
+
+  a
+    display: block
+    background-color: transparentize($muted, 0.5)
+    padding: 6px 10px
+    color: $base-text
+
+    &:hover
+      background-color: $highlight
+      text-decoration: none

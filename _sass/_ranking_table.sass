@@ -1,0 +1,19 @@
+.ranking-table
+  margin-bottom: 20px
+  overflow: hidden
+  overflow-x: auto
+
+  thead
+    tr
+      color: $nav-text
+      background-color: $base-text
+      font-size: 12px
+
+  tbody
+    tr
+      &:nth-of-type(even)
+        background-color: $muted
+
+      td
+        &:first-of-type
+          background-color: transparentize($highlight_opt, 0.5)

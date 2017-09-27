@@ -1,0 +1,35 @@
+<div class="container list-wrap">
+  <nav class="navbar">
+    <div class="navbar-header">
+      <p class="navbar-brand" href="#">
+        {{ page.nav_name }}
+      </p>
+    </div>
+    <ul class="nav nav-justified">
+    {% if page.nav_filter == 'ranking' %}
+
+      {% for item in site.data.navigation.nav_ranking %}
+
+      <li class="text-center" role="presentation">
+        <button class="text-capitalize" data-toggle="portfilter" data-target="{{ item.link }}">
+        {{ item.text }}
+        </button>
+      </li>
+
+      {% endfor %}
+    {% elsif page.nav_filter == 'article' %}
+      {% for item in site.data.navigation.nav_article %}
+
+      <li class="text-center" role="presentation">
+        <button class="text-capitalize" data-toggle="portfilter" data-target="{{ item.link }}">
+        {{ item.text }}
+        </button>
+      </li>
+
+      {% endfor %}
+    {% endif %}
+
+
+    </ul>
+  </nav>
+</div>

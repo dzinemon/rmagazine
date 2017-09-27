@@ -1,0 +1,84 @@
+---
+layout: default
+
+nav_name: Article
+
+# Subnavigation filter header set up
+# for news, recipes, resources, articles use 'article'
+# for ranking use 'ranking'
+# nav_filter: article
+
+filter_script:
+
+---
+
+<div class="container recipe">
+
+  <div class="row">
+<!--Nav col start-->
+
+    <div class="col-md-3 recipe-nav navbar">
+      <div class="navbar-header">
+        <button class="pull-left navbar-toggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> <strong>Menu</strong>
+            </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+        <a href="{{ site.url }}" class="home-btn">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          <strong>Home</strong>
+        </a>
+
+      <p class="text-uppercase
+      "><small><strong>Browse by category</strong></small></p>
+
+      <ul>
+        <li><a href="">&rang; &nbsp; All Recipes</a></li>
+        <li><a href="">&rang; &nbsp; Appetizers</a></li>
+        <li><a href="">&rang; &nbsp; Breakfast and Brunch</a></li>
+        <li class="dropdown">
+        <a data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">&rang; &nbsp; Main Dish</a>
+
+          <ul class="collapse" id="collapseExample">
+            <li><a href="">&rang; &nbsp; All</a></li>
+            <li><a href="">&rang; &nbsp; Beef</a></li>
+            <li><a href="">&rang; &nbsp; Chicken</a></li>
+            <li><a href="">&rang; &nbsp; Pork</a></li>
+          </ul>
+        </li>
+        <li><a href="">&rang; &nbsp; Desserts</a></li>
+        <li><a href="">&rang; &nbsp; Drink</a></li>
+      </ul>
+
+
+      {% include archive.html %}
+
+
+      </div>
+
+    </div>
+<!--Nav col end-->
+
+
+
+<!--Content col start-->
+    <div class="col-md-6 recipe-content">
+
+    <h1 class="text-capitalize">Tag: {{ page.tag | replace: '-', ' ' }}</h1>
+
+
+<ul>
+
+</ul>
+
+    </div>
+<!--Content col end-->
+
+      <div class="col-md-3">
+        {% include banner.html %}
+      </div>
+  </div>
+</div>
+

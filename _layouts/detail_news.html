@@ -1,0 +1,30 @@
+---
+layout: default
+
+nav_name: News
+
+# Subnavigation filter header set up
+# for news, recipes, resources, articles use 'article'
+# for ranking use 'ranking'
+<!--nav_filter: article-->
+
+filter_script:
+
+---
+
+
+<div class="container article">
+  <div class="row">
+    <div class="col-md-8 col-offset-1">
+      <h2>{{ page.headline }}</h2>
+
+      <p class="lead">{{ page.subheadline }}</p>
+
+      {{ page.content }}
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+      {% include banner.html %}
+    </div>
+  </div>
+</div>
+

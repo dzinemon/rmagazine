@@ -1,0 +1,29 @@
+<div class="container resources">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="section-title section-title__light"><a href="{{ site.url }}{{ site.link_resources }}" class="text-uppercase">Resources</a></h2>
+          </div>
+    </div>
+  <div class="row resources-wrap">
+
+    {% assign resources = (site.resources | sort: 'rank' | reverse ) %}
+    {% for item in resources limit: 8 %}
+    <div class="col-md-3 col-sm-6 resources-item">
+        <a class="link-wrap" href="{{ item.url }}">
+          <figure>
+            <img class="img-responsive" src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+            <figcaption class="text-center">
+              {{ item.image_1_name }}
+            </figcaption>
+          </figure>
+        </a>
+    </div>
+    {% endfor %}
+
+  </div>
+  <div class="text-center">
+    <a href="{{ site.url }}{{ site.link_resources }}" class="btn-more btn-more__light">
+      More Resources
+    </a>
+  </div>
+</div>

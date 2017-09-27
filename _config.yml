@@ -1,0 +1,144 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Rmagazine awesome title | Jekyll site
+email: rmagazine@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+author: Rmagazine
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: rmagazine
+github_username:  rmagazine
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+livereload: true
+
+plugins:
+  - jekyll-feed
+  - octopress-paginate
+  - jekyll-archives
+  - jekyll-seo-tag
+  - jekyll-picture-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Sass folder and settings
+sass:
+    sass_dir: _sass
+    style: compressed
+
+excerpt_separator: <!--more-->
+
+jekyll-archives:
+  enabled: tags
+  layout: 'detail_recipe'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+
+tags:
+#  - appetizers
+#  - breakfast-and-brunch
+#  - main-dish-beef
+#  - main-dish-chicken
+#  - main-dish-pork
+#  - desserts
+#  - drinks
+
+# Pagination settings
+pagination:
+  limit: false
+  per_page: 6
+  title_suffix: " (page :num)"
+  reversed: true
+
+permalink: /blog/:title
+
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path
+  news:
+    output: true
+    permalink: /news/:path
+  recipes:
+    output: true
+    output_tags: true
+    permalink: /recipes/:path
+  resources:
+    output: true
+    permalink: /resources/:path
+  rankings:
+    output: true
+    permalink: /rankings/:path/
+  rankings_prices:
+    output: true
+    permalink: /rankings/:path/prices/
+  advertisements:
+    output: true
+    permalink: /advertisements/:path
+
+# Pages links
+link_rankings: /rankings
+link_articles: /articles
+link_news: /news
+link_resources: /resources
+link_recipes: /recipes
+
+# Settings
+article_button_text: Read Article
+
+# Picture tag !  NEEDS CONFIGURATION  !
+picture:
+  source: "_images"
+  output: "assets/images"
+  markup: "picture"
+  presets:
+    image_1:
+      attr:
+        class: ""
+      ppi: [1]
+      source_1600:
+        media: "min-width: 1600px"
+        width: "1600"
+      source_1024:
+        media: "min-width: 1024px"
+        width: "1024"
+      source_768:
+        media: "min-width: 768px"
+        width: "786"
+      source_600:
+        media: "min-width: 600px"
+        width: "600"
+      source_default:
+        width: "1024"

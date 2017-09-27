@@ -1,0 +1,75 @@
+<div class="container ranking">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="section-title section-title__dark"><a href="{{ site.url }}{{ site.link_rankings }}" class="text-uppercase">Social media ranking</a></h2>
+    </div>
+  </div>
+  <div class="row ranking-wrap">
+    <div class="col-md-4 ranking-box">
+
+      <div class="ranking-head text-center">
+        <span>Quick Service</span>
+      </div>
+      <ul class="ranking-list">
+        {% assign qs_items = (site.rankings | sort: 'social_media_rank' | reverse | where: 'category', 'quick_service') %} {% for item in qs_items limit: 10 %}
+        <li class="ranking-item clearfix">
+          <a href="{{ item.url }}" class="img-link">
+            <img src="{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
+          </a>
+          {{ item.company_name }}
+          <div class="pull-right">
+            <a href="{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+    <div class="col-md-4 ranking-box">
+
+      <div class="ranking-head text-center">
+        <span>Fast Casual</span>
+      </div>
+      <ul class="ranking-list">
+        {% assign fc_items = (site.rankings | sort: 'social_media_rank' | reverse | where: 'category', 'fast_casual') %} {% for item in fc_items limit: 10 %}
+        <li class="ranking-item clearfix">
+          <a href="{{ item.url }}" class="img-link">
+            <img src="{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
+          </a>
+          {{ item.company_name }}
+          <div class="pull-right">
+            <a href="{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+    <div class="col-md-4 ranking-box">
+
+      <div class="ranking-head text-center">
+        <span>Table Service</span>
+      </div>
+      <ul class="ranking-list">
+        {% assign ts_items = (site.rankings | sort: 'social_media_rank' | reverse | where: 'category', 'table_service') %} {% for item in ts_items limit: 10 %}
+        <li class="ranking-item clearfix">
+          <a href="{{ item.url }}" class="img-link">
+            <img src="{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
+          </a>
+          {{ item.company_name }}
+          <div class="pull-right">
+            <a href="{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="text-center">
+    <a href="{{ site.url }}{{ site.link_rankings }}" class="btn-more btn-more__dark">
+      View All Rankings
+    </a>
+  </div>
+</div>

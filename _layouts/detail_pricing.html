@@ -1,0 +1,89 @@
+---
+layout: default
+
+nav_name: Article
+
+# Subnavigation filter header set up
+# for news, recipes, resources, articles use 'article'
+# for ranking use 'ranking'
+<!--nav_filter: article-->
+
+filter_script:
+
+---
+
+<div class="container article">
+
+  <div class="row">
+    <div class="col-md-8 col-offset-1 article-content">
+     <div class="article-crumbs clearfix">
+        <span class="text-muted">You are here:</span>
+        <a href="{{ site.url }}{{ page.url | remove: "prices/" }}">Home</a></li>
+        <span class="text-muted">&rsaquo; {{ page.company_name }} Prices</span>
+        <p class="text-danger pull-right"><i>This website is not associated with {{ page.company_name }}</i></p>
+      </div>
+      <h1>{{ page.company_name }} Prices</h1>
+
+      <p>{{ page.company_description }}</p>
+
+      <table class="table table-pricing">
+        <thead>
+          <tr class="text-uppercase">
+            <td>Food</td>
+            <td>Size</td>
+            <td>Price</td>
+          </tr>
+          <tr class="table-title">
+            <td class="text-center" colspan="3">
+              <span class="table-headline">{{ page.menu_1.category }}</span>
+              <p class="">
+                {{ page.menu_1.description }}
+              </p>
+            </td>
+          </tr>
+        </thead>
+          {% for item in page.menu_1.items %}
+
+          <tr class="table-muted">
+            <td>{{ item.food }}</td>
+            <td>{{ item.size }}</td>
+            <td>{{ item.price }}</td>
+          </tr>
+
+          {% endfor %}
+
+          <tr class="table-title">
+            <td class="text-center" colspan="3">
+              <span class="table-headline">{{ page.menu_2.category }}</span>
+              <p class="">
+                {{ page.menu_2.description }}
+              </p>
+            </td>
+          </tr>
+
+          {% for item in page.menu_2.items %}
+
+          <tr class="table-muted">
+            <td>{{ item.food }}</td>
+            <td>{{ item.size }}</td>
+            <td>{{ item.price }}</td>
+          </tr>
+
+          {% endfor %}
+
+
+
+      </table>
+      <p>
+        <small><strong>Prices and selections offered may vary by location. All prices on this website are averaged and should only be used as estimates.</strong></small>
+      </p>
+      <p><small><strong>
+        Company trademarks are the property of the respective company and Restaurant Magazine is not affiliated with company.
+      </strong></small></p>
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+      {% include banner.html %}
+    </div>
+  </div>
+</div>
+

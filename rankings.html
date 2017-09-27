@@ -1,0 +1,60 @@
+---
+layout: default
+
+nav_name: Rankings
+
+# Subnavigation filter header set up
+# for news, recipes, resources, articles use 'article'
+# for ranking use 'ranking'
+nav_filter: ranking
+
+permalink: /rankings/
+
+filter_script: true
+
+---
+
+{% include list_article_nav.html %}
+
+<!--Include table Start-->
+<div class="container ranking-table">
+  <div class="row">
+    <div class="col-lg-12 ranking-table">
+      <table class="table">
+        <thead>
+          <tr class="text-uppercase">
+            <th>QSR 50 Rank</th>
+            <th>Company</th>
+            <th>Change in position</th>
+            <th>Category</th>
+            <th>2016 U.S. Systemwide Sales (millions)</th>
+            <th>2016 U.S. Average Sales Per Unit</th>
+            <th>Number of Franchised Units in 2016</th>
+            <th>Number of Company Units in 2016</th>
+            <th>Total Units in 2016</th>
+            <th>Total Change in Units from 2016</th>
+          </tr>
+        </thead>
+        <tbody>
+         {% assign rainking_items = site.rankings | sort: 'social_media_rank' | reverse %} {% for item in rainking_items  %}
+          <tr data-tag="{{ item.category }}">
+            <td>{{ forloop.index }}</td>
+            <td>{{ item.company_name }}</td>
+            <td>{{ item.position_change }}</td>
+            <td>{{ item.menu_category }}</td>
+            <td>{{ item.sales_systemwide }}</td>
+            <td>{{ item.sales_avgperunit }}</td>
+            <td>{{ item.units_franchised }}</td>
+            <td>{{ item.units_company }}</td>
+            <td>{{ item.units_total }}</td>
+            <td>{{ item.units_change }}</td>
+          </tr>
+
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+<!--Include table End-->
+

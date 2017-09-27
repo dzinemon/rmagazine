@@ -1,0 +1,5 @@
+{% for item in site.data.banners.banner %}
+<a href="{{ item.url }}" class="banner col-xs-6 col-sm-6 col-md-12">
+  <img class="img-responsive" src="{{ item.img }}" alt="{{ item.name }}">
+</a>
+{% endfor %}

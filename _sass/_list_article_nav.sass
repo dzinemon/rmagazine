@@ -1,0 +1,82 @@
+.list-wrap
+  @include phone
+    margin-bottom: 20px
+
+  @include tablet-ls
+    margin-bottom: 0
+
+  a, p
+    font-size: 18px
+
+  .navbar-brand
+    padding: 0
+
+  button
+    background-color: transparent
+    outline-color: $highlight
+    padding: 5px 30px
+    border: 1px solid transparent
+
+    &:hover
+      color: $highlight
+    &:focus,
+    &:active
+      color: $highlight
+      outline-color: $highlight
+      outline-style: solid
+      outline-width: 3px
+
+
+  .navbar-brand
+    font-size: 24px
+    font-weight: 500
+
+.list-article
+  border: 1px solid $muted
+
+  .artice_details
+    padding-bottom: 20px
+    margin-bottom: 20px
+    border-bottom: 1px solid $muted
+
+    small
+      font-style: italic
+    span
+      color: $highlight
+
+  .artice_excerpt
+    margin-bottom: 20px
+    p
+      height: 4em
+      padding: 0 5px
+      @include ellipsis
+      white-space: pre-wrap
+
+.article_content
+  margin: 24px
+
+  h4
+    height: 6em
+    @include ellipsis
+    white-space: unset
+
+.list-article__link
+  color: $base-text
+  font-size: 32px
+  font-weight: 600
+
+  &:hover
+    color: $highlight
+    text-decoration: none
+
+.list-btn__more
+  padding: 6px
+  color: $highlight
+  border: 1px solid $highlight
+  border-radius: 6px
+  font-weight: 400
+
+  &:hover
+    text-decoration: none
+    color: $nav-text
+    background-color: $highlight

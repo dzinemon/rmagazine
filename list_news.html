@@ -1,0 +1,34 @@
+---
+layout: default
+
+nav_name: News
+
+# Subnavigation filter header set up
+# for news, recipes, resources, articles use 'article'
+# for ranking use 'ranking'
+nav_filter: article
+
+filter_script: true
+
+permalink: /news/
+
+paginate:
+  collection: news
+
+---
+
+{% include list_article_nav.html %}
+
+<!--Include list Start-->
+<div class="container">
+  <div class="row">
+    {% for item in paginator.news %}
+
+    {% include list_item.html %}
+
+    {% endfor %}</div>
+  </div>
+<!--Include list End-->
+
+{% include pager.html %}
+

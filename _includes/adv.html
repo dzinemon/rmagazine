@@ -1,0 +1,18 @@
+{% for item in site.advertisements limit: 1%}
+<div class="container adv">
+  <div class="row text-center">
+    <div class="col-sm-4 adv-name">
+      <span class="adv-name__title1">{{ item.title_1 }}</span>
+      <span class="text-uppercase adv-name__title2">{{ item.title_2 }}</span>
+    </div>
+    <div class="col-sm-8">
+      <div class="adv-box" style="background-image: url('{{ site.url }}{{ item.image }}')">
+        <span>{{ item.adv_text }}</span>
+        <a href="{{ item.}}" class="adv-btn">
+          {{ item.adv_btn_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

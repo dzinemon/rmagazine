@@ -1,0 +1,39 @@
+.navbar-navy
+  background-color: $nav-bg
+  li
+    >a
+      color: $nav-text
+      font-size: 16px
+
+      &.write-us
+        background-color: $nav-el
+        font-weight: bold
+
+      &:hover, &:focus
+        background-color: $nav-el-hover
+
+      span
+        margin-right: 15px
+        z-index: 1
+
+        &:before
+          position: relative
+          z-index: 3
+        &:after
+          display: block
+          position: absolute
+          top: -10px
+          left: -10px
+          width: 36px
+          height: 36px
+          content: ""
+          background-color: $nav-bg
+          z-index: 1
+          border-radius: 50%
+
+  .navbar-toggle
+    background-color: $nav-bg
+    border-color: $nav-text
+
+    .icon-bar
+      background-color: $nav-text

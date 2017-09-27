@@ -1,0 +1,46 @@
+---
+layout: default
+
+nav_name: Resources
+
+# Subnavigation filter header set up
+# for news, recipes, resources, articles use 'article'
+# for ranking use 'ranking'
+nav_filter: article
+
+filter_script: true
+
+permalink: /prices/
+
+paginate:
+  collection: resources
+
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        Below is a list of all fast food restaurants of which we have menu prices. If you would like to suggest a restaurant to be added to our website, contact us at info [at] fastfoodmenuprices.com.
+      </p>
+      <div class="clearfix">
+        <div class="prices">
+          {% assign prices = site.rankings | sort: 'company_name' %}
+          {% for item in prices %}
+
+          <div class="prices-item">
+            <a href="{{ item.link }}">
+            {{ item.company_name }}</a>
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      {% include banner.html %}
+    </div>
+  </div>
+
+</div>
+

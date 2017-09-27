@@ -1,0 +1,82 @@
+---
+layout: default
+
+nav_name: Article
+
+# Subnavigation filter header set up
+# for news, recipes, resources, articles use 'article'
+# for ranking use 'ranking'
+<!--nav_filter: article-->
+
+filter_script:
+
+---
+
+
+<div class="container article">
+  <div class="row">
+    <div class="col-md-8 col-offset-1 article-content">
+      <h1>
+      <img class="logo" src="{{ page.company_logo }}" alt="{{ page.company_name }}">
+      {{ page.company_name }}</h1>
+
+      <img src="{{ page.company_img }}" alt="{{ page.company_name }}">
+
+      <p class="lead">{{ page.company_description }}</p>
+
+      <table class="table table-ranking">
+        <tr>
+          <td>Top 500 Year:</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Headquaters:</td>
+          <td>{{ page.headquarters }}</td>
+        </tr>
+        <tr>
+          <td>2016 U.S. Sales ($000):</td>
+          <td>{{ page.sales_systemwide }}</td>
+        </tr>
+        <tr>
+          <td>Change from 2015:</td>
+          <td>{{ page.units_change }}</td>
+        </tr>
+        <tr>
+          <td>U.S. Units:</td>
+          <td>{{ page.units_franchised }}</td>
+        </tr>
+        <tr>
+          <td>Change from 2015: </td>
+          <td>{{ page.units_change | times: 100 | divided_by: page.units_total | round: 2 }}%</td>
+        </tr>
+        <tr>
+          <td>Segment:</td>
+          <td>{{ page.segment }}</td>
+        </tr>
+        <tr>
+          <td>Menu Category:</td>
+          <td>{{ page.menu_category }}</td>
+        </tr>
+
+      </table>
+      <p>
+        <strong>
+          <span class="text-uppercase">More in this chain&nbsp;</span>
+          <a href="{{ site.url }}{{ page.url }}prices" class="btn-link">{{ page.company_name }}</a>
+        </strong>
+      </p>
+      <p>
+        <a href="" class="btn btn-lg btn-primary text-uppercase">
+          Top 500
+        </a>
+        <a href="" class="btn btn-lg btn-primary">
+          1 of 250 <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+      {% include banner.html %}
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="col-md-4 col-sm-6 article-box" data-tag="{{ item.category }}">
+  <div class="list-article text-center">
+    <a href="{{ item.url }}">
+      <img class="img-responsive" src="{{ item.image_1_img }}" alt="">
+    </a>
+    <div class="article_content">
+      <h4 class="text-center">
+        <a class="list-article__link" href="{{ item.url }}">
+        {{ item.headline }}
+        </a>
+      </h4>
+      <div class="artice_details">
+        <small class="text-muted">
+        Posted on <span>
+        {{ item.date | date: '%B %d, %Y' }}
+        </span>
+        by
+        <span>
+        {{ item.author}}
+        </span>
+        </small>
+      </div>
+      <div class="artice_excerpt">
+        <p>{{ item.excerpt | remove: '<p>' | remove: '</p>' | 100 }}</p>
+      </div>
+      <a href="{{ site.url }}{{ item.url }}" class="list-btn__more btn-block text-uppercase">
+        {{ site.article_button_text }}
+      </a>
+    </div>
+  </div>
+</div>

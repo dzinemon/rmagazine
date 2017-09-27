@@ -1,0 +1,135 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 article-box">
+      <a href="{{ site.url }}{{ site.link_news }}">
+        <h3 class="text-uppercase article-title">Top news</h3>
+      </a>
+      {% assign news = (site.news | sort: 'rank' | where: 'featured', 'true' | reverse ) %} {% for item in news limit: 1 offset: 3 %}
+
+      <div class="article-lg">
+        <div class="thumbnail">
+          <a href="{{ item.url }}"><img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
+          <div class="">
+            <a href="{{ item.url }}">
+              <h4>{{ item.headline }}</h4>
+            </a>
+            <p class="text-muted">{{ item.excerpt | remove: '<p>' | remove: '</p>' | 100 }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% for item in news limit: 4 offset: 4 %}
+      <div class="article-md clearfix">
+        <div class="pull-left">
+          <a href="{{ item.url }}">
+            <img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          </a>
+        </div>
+        <div class="pull-left article-md__text">
+          <a href="{{ item.url }}">
+            <h4 class="media-heading">{{ item.headline }}</h4>
+          </a>
+          <p class="text-muted"><small>{{ item.date | date: '%B %d, %Y' }}</small></p>
+        </div>
+      </div>
+
+
+      {% endfor %}
+      <a href="{{ site.url }}{{ site.link_news }}" class="article-box_more text-center btn-lg btn-block">
+        <em>... read more</em>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4 article-box">
+      <a href="{{ site.url }}{{ site.link_articles }}">
+        <h3 class="text-uppercase article-title">Articles</h3>
+      </a>
+      {% assign articles = (site.articles | sort: 'rank' | where: 'featured', 'true' | reverse ) %} {% for item in articles limit: 1 offset: 3 %}
+
+      <div class="article-lg">
+        <div class="thumbnail">
+          <a href="{{ item.url }}"><img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
+          <div class="">
+            <a href="{{ item.url }}">
+              <h4>{{ item.headline }}</h4>
+            </a>
+            <p class="text-muted">{{ item.excerpt | remove: '<p>' | remove: '</p>' | 100 }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% for item in articles limit: 4 offset: 4 %}
+
+      <div class="article-md clearfix">
+        <div class="pull-left">
+          <a href="{{ item.url }}">
+            <img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          </a>
+        </div>
+        <div class="pull-left article-md__text">
+          <a href="{{ item.url }}">
+            <h4 class="media-heading">{{ item.headline }}</h4>
+          </a>
+          <p class="text-muted"><small>{{ item.date | date: '%B %d, %Y' }}</small></p>
+        </div>
+      </div>
+
+      {% endfor %}
+
+      <a href="{{ site.url }}{{ site.link_articles}}" class="article-box_more text-center btn-lg btn-block">
+        <em>... read more</em>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 article-box">
+      <a href="{{ site.url }}{{ site.link_recipes }}">
+        <h3 class="text-uppercase article-title">Recipes</h3>
+      </a>
+      {% assign recipes = (site.recipes | sort: 'rank' | where: 'featured', 'true' | reverse ) %} {% for item in recipes limit: 1 offset: 3 %}
+
+      <div class="article-lg">
+        <div class="thumbnail">
+          <a href="{{ item.url }}"><img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
+          <div class="">
+            <a href="{{ item.url }}">
+              <h4>{{ item.headline }}</h4>
+            </a>
+            <p class="text-muted">{{ item.excerpt | remove: '<p>' | remove: '</p>' | 100 }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% for item in recipes limit: 4 offset: 4 %}
+
+      <div class="article-md clearfix">
+        <div class="pull-left">
+          <a href="{{ item.url }}">
+            <img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          </a>
+        </div>
+        <div class="pull-left article-md__text">
+          <a href="{{ item.url }}">
+            <h4 class="media-heading">{{ item.headline }}</h4>
+          </a>
+          <p class="text-muted"><small>{{ item.date | date: '%B %d, %Y' }}</small></p>
+        </div>
+      </div>
+
+      {% endfor %}
+      <a href="{{ site.url }}{{ site.link_recipes }}" class="article-box_more text-center btn-lg btn-block">
+        <em>... read more</em>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

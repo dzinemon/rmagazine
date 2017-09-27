@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <section class="col-lg-12">
+      <ul class="pager">
+        {% if paginator.previous_page_path %}
+        <li class="next">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">
+          Newer {{ page.nav_name }}
+          <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+        </li>
+        {% endif %}
+        {% if paginator.next_page_path %}
+        <li class="previous">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+           Older {{ page.nav_name }}
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+  </div>
+</div>

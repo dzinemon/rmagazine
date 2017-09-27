@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 top_article--lg top_article">
+    {% assign top_articles = (site.articles | sort: 'rank' | where: 'featured', 'true' | reverse ) %}
+    {% for item in top_articles limit: 1 %}
+      <a href="{{ site.url }}{{ item.url }}">
+        <figure>
+          <img class="img-responsive" src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          <figcaption>
+            {{ item.image_1_caption }}
+          </figcaption>
+        </figure>
+      </a>
+    {% endfor %}
+    </div>
+    <div class="col-md-4">
+    {% for item in top_articles limit: 2 offset: 1 %}
+      <div class="top_article--md top_article">
+        <a href="{{ site.url }}{{ item.url }}">
+        <figure>
+          <img class="img-responsive" src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          <figcaption>
+            {{ item.image_1_caption }}
+          </figcaption>
+        </figure>
+      </a>
+      </div>
+    {% endfor %}
+
+    </div>
+
+  </div>
+</div>

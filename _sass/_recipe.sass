@@ -1,0 +1,68 @@
+.recipe-nav
+  #collapseExample
+    margin-left: 20px
+
+  a
+    color: $base-text
+    font-weight: 500
+    cursor: pointer
+
+
+    &:hover
+      text-decoration: none
+      color: $highlight
+
+  .navbar-header
+    button
+      background-color: transparent
+
+.home-btn
+  padding: 10px 0 20px
+  display: block
+
+.recipe-content
+  .carousel
+    margin-bottom: 30px
+
+  .carousel-indicators
+    background-color: transparentize(#000, .4)
+    width: 100%
+    left: 0
+    bottom: 0
+    margin: 0
+    padding-top: 5px
+
+    li
+      position: relative
+      width: 48px
+      height: 48px
+      overflow: hidden
+      border-radius: 0
+
+      &:active
+        width: 48px
+        height: 48px
+
+      img
+        position: absolute
+        top: 0
+        left: -24px
+        height: 100%
+
+.recipe-ingredients
+  label
+    font-weight: 500
+
+  input[type=checkbox]
+
+    &:checked
+      ~span
+        text-decoration: line-through
+        color: transparentize($base-text, .7)
+  span
+    margin-left: 10px
+
+.ingredient-box
+  padding: 20px
+  background-color: transparentize($muted, .8)
+
