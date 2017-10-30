@@ -8,9 +8,9 @@
 
       <div class="article-lg">
         <div class="thumbnail">
-          <a href="{{ item.url }}"><img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
+          <a href="{{ site.url }}{{ item.url }}"><img src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
           <div class="">
-            <a href="{{ item.url }}">
+            <a href="{{ site.url }}{{ item.url }}">
               <h4>{{ item.headline }}</h4>
             </a>
             <p class="text-muted">{{ item.excerpt | remove: '<p>' | remove: '</p>' | 100 }}</p>
@@ -20,12 +20,12 @@
       {% endfor %} {% for item in news limit: 4 offset: 4 %}
       <div class="article-md clearfix">
         <div class="pull-left">
-          <a href="{{ item.url }}">
-            <img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          <a href="{{ site.url }}{{ item.url }}">
+            <img src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
           </a>
         </div>
         <div class="pull-left article-md__text">
-          <a href="{{ item.url }}">
+          <a href="{{ site.url }}{{ item.url }}">
             <h4 class="media-heading">{{ item.headline }}</h4>
           </a>
           <p class="text-muted"><small>{{ item.date | date: '%B %d, %Y' }}</small></p>
@@ -52,9 +52,9 @@
 
       <div class="article-lg">
         <div class="thumbnail">
-          <a href="{{ item.url }}"><img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
+          <a href="{{ site.url }}{{ item.url }}"><img src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
           <div class="">
-            <a href="{{ item.url }}">
+            <a href="{{ site.url }}{{ item.url }}">
               <h4>{{ item.headline }}</h4>
             </a>
             <p class="text-muted">{{ item.excerpt | remove: '<p>' | remove: '</p>' | 100 }}</p>
@@ -65,12 +65,12 @@
 
       <div class="article-md clearfix">
         <div class="pull-left">
-          <a href="{{ item.url }}">
-            <img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          <a href="{{ site.url }}{{ item.url }}">
+            <img src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
           </a>
         </div>
         <div class="pull-left article-md__text">
-          <a href="{{ item.url }}">
+          <a href="{{ site.url }}{{ item.url }}">
             <h4 class="media-heading">{{ item.headline }}</h4>
           </a>
           <p class="text-muted"><small>{{ item.date | date: '%B %d, %Y' }}</small></p>
@@ -96,9 +96,9 @@
 
       <div class="article-lg">
         <div class="thumbnail">
-          <a href="{{ item.url }}"><img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
+          <a href="{{ site.url }}{{ item.url }}"><img src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}"></a>
           <div class="">
-            <a href="{{ item.url }}">
+            <a href="{{ site.url }}{{ item.url }}">
               <h4>{{ item.headline }}</h4>
             </a>
             <p class="text-muted">{{ item.excerpt | remove: '<p>' | remove: '</p>' | 100 }}</p>
@@ -109,12 +109,12 @@
 
       <div class="article-md clearfix">
         <div class="pull-left">
-          <a href="{{ item.url }}">
-            <img src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          <a href="{{ site.url }}{{ item.url }}">
+            <img src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
           </a>
         </div>
         <div class="pull-left article-md__text">
-          <a href="{{ item.url }}">
+          <a href="{{ site.url }}{{ item.url }}">
             <h4 class="media-heading">{{ item.headline }}</h4>
           </a>
           <p class="text-muted"><small>{{ item.date | date: '%B %d, %Y' }}</small></p>

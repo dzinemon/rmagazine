@@ -13,12 +13,12 @@
       <ul class="ranking-list">
         {% assign qs_items = (site.rankings | sort: 'social_media_rank' | reverse | where: 'category', 'quick_service') %} {% for item in qs_items limit: 10 %}
         <li class="ranking-item clearfix">
-          <a href="{{ item.url }}" class="img-link">
-            <img src="{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
+          <a href="{{ site.url }}{{ item.url }}" class="img-link">
+            <img src="{{ site.url }}{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
           </a>
           {{ item.company_name }}
           <div class="pull-right">
-            <a href="{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
+            <a href="{{ site.url }}{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
           </div>
         </li>
         {% endfor %}
@@ -34,12 +34,12 @@
       <ul class="ranking-list">
         {% assign fc_items = (site.rankings | sort: 'social_media_rank' | reverse | where: 'category', 'fast_casual') %} {% for item in fc_items limit: 10 %}
         <li class="ranking-item clearfix">
-          <a href="{{ item.url }}" class="img-link">
-            <img src="{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
+          <a href="{{ site.url }}{{ item.url }}" class="img-link">
+            <img src="{{ site.url }}{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
           </a>
           {{ item.company_name }}
           <div class="pull-right">
-            <a href="{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
+            <a href="{{ site.url }}{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
           </div>
         </li>
         {% endfor %}
@@ -55,12 +55,12 @@
       <ul class="ranking-list">
         {% assign ts_items = (site.rankings | sort: 'social_media_rank' | reverse | where: 'category', 'table_service') %} {% for item in ts_items limit: 10 %}
         <li class="ranking-item clearfix">
-          <a href="{{ item.url }}" class="img-link">
-            <img src="{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
+          <a href="{{ site.url }}{{ item.url }}" class="img-link">
+            <img src="{{ site.url }}{{ item.company_logo }}" alt="{{ item.company_name }} ranking">
           </a>
           {{ item.company_name }}
           <div class="pull-right">
-            <a href="{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
+            <a href="{{ site.url }}{{ item.url }}" class="rank-link">{{ item.social_media_rank }}</a>
           </div>
         </li>
         {% endfor %}

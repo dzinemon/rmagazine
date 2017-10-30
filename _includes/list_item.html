@@ -1,11 +1,11 @@
 <div class="col-md-4 col-sm-6 article-box" data-tag="{{ item.category }}">
   <div class="list-article text-center">
-    <a href="{{ item.url }}">
-      <img class="img-responsive" src="{{ item.image_1_img }}" alt="">
+    <a href="{{ site.url }}{{ item.url }}">
+      <img class="img-responsive" src="{{ site.url }}{{ item.image_1_img }}" alt="">
     </a>
     <div class="article_content">
       <h4 class="text-center">
-        <a class="list-article__link" href="{{ item.url }}">
+        <a class="list-article__link" href="{{ site.url }}{{ item.url }}">
         {{ item.headline }}
         </a>
       </h4>

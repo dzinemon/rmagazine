@@ -5,7 +5,7 @@
     {% for item in top_articles limit: 1 %}
       <a href="{{ site.url }}{{ item.url }}">
         <figure>
-          <img class="img-responsive" src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          <img class="img-responsive" src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
           <figcaption>
             {{ item.image_1_caption }}
           </figcaption>
@@ -18,7 +18,7 @@
       <div class="top_article--md top_article">
         <a href="{{ site.url }}{{ item.url }}">
         <figure>
-          <img class="img-responsive" src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+          <img class="img-responsive" src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
           <figcaption>
             {{ item.image_1_caption }}
           </figcaption>

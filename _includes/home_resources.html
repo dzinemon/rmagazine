@@ -9,9 +9,9 @@
     {% assign resources = (site.resources | sort: 'rank' | reverse ) %}
     {% for item in resources limit: 8 %}
     <div class="col-md-3 col-sm-6 resources-item">
-        <a class="link-wrap" href="{{ item.url }}">
+        <a class="link-wrap" href="{{ site.url }}{{ item.url }}">
           <figure>
-            <img class="img-responsive" src="{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
+            <img class="img-responsive" src="{{ site.url }}{{ item.image_1_img }}" alt="{{ item.image_1_alt }}">
             <figcaption class="text-center">
               {{ item.image_1_name }}
             </figcaption>

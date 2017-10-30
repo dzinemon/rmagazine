@@ -1,7 +1,7 @@
 banner:
   - name:
-    img: '/img/banner/Untitled%202017-09-22%2023-37-08.png'
+    img: 'http://via.placeholder.com/350x550?text=Banner+One'
     url: "#"
   - name:
-    img: '/img/banner/Untitled%202017-09-22%2023-36-25.png'
+    img: 'http://via.placeholder.com/350x450?text=Banner+Two'
     url: "#"
